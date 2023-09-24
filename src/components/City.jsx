@@ -21,16 +21,16 @@ function City() {
 		getCity(id);
 	}, [id]);
 
-	if (isLoading) return <Spinner />;
-
 	const { cityName, countryCode, date, notes } = currentCity;
+
+	if (isLoading) return <Spinner />;
 
 	return (
 		<div className={styles.city}>
 			<div className={styles.row}>
 				<h6>City name</h6>
 				<h3>
-					<span className={`fi fi-${countryCode.toLowerCase()}`}></span> {cityName}
+					<span className={`fi fi-${(countryCode || '').toLowerCase()}`}></span> {cityName}
 				</h3>
 			</div>
 
