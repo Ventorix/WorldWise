@@ -30,7 +30,14 @@ function App() {
 							</CitiesProvider>
 						}
 					/>
-					<Route path='cities/:id' element={<City />} />
+					<Route
+						path='cities/:id'
+						element={
+							<CitiesProvider>
+								<City />
+							</CitiesProvider>
+						}
+					/>
 					<Route
 						path='countries'
 						element={
