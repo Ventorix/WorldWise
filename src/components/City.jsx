@@ -30,7 +30,7 @@ function City() {
 			<div className={styles.row}>
 				<h6>City name</h6>
 				<h3>
-					<span>{countryCode}</span> {cityName}
+					<span className={`fi fi-${countryCode.toLowerCase()}`}></span> {cityName}
 				</h3>
 			</div>
 
