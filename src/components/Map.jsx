@@ -23,7 +23,7 @@ function Map() {
 				{cities.map((city) => (
 					<Marker key={city.id} position={[city.position.lat, city.position.lng]}>
 						<Popup>
-							<span>{city.emoji}</span>
+							<span className={`fi fi-${city.countryCode.toLowerCase()}`}></span>
 							<span>{city.cityName}</span>
 						</Popup>
 					</Marker>
