@@ -1,32 +1,67 @@
 // "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=0&longitude=0"
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useUrlPosition } from '../hooks/useUrlPosition';
 
 import styles from './Form.module.css';
 import Button from './Button';
-import { useNavigate } from 'react-router-dom';
 import BackButton from './BackButton';
+import Message from './Message';
+import Spinner from './Spinner';
 
-export function convertToEmoji(countryCode) {
-	const codePoints = countryCode
-		.toUpperCase()
-		.split('')
-		.map((char) => 127397 + char.charCodeAt());
-	return String.fromCodePoint(...codePoints);
-}
+const BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client';
 
 function Form() {
 	const [cityName, setCityName] = useState('');
 	const [country, setCountry] = useState('');
 	const [date, setDate] = useState(new Date());
 	const [notes, setNotes] = useState('');
+	const [countryCode, setCountryCode] = useState('');
+	const [geocodingError, setGeocodingError] = useState('');
+	const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
+	const [lat, lng] = useUrlPosition();
+
+	useEffect(
+		function () {
+			async function fetchCityData() {
+				try {
+					setIsLoadingGeocoding(true);
+					setGeocodingError('');
+
+					const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`);
+					const data = await res.json();
+
+					if (!data.countryCode)
+						throw new Error("That doesn't seem to be city. Click in another place");
+
+					setCityName(data.city || data.locality || '');
+					setCountry(data.countryName);
+					setCountryCode(data.countryCode);
+				} catch (err) {
+					setGeocodingError(err.message);
+				} finally {
+					setIsLoadingGeocoding(false);
+				}
+			}
+			fetchCityData();
+		},
+		[lat, lng],
+	);
+
+	if (isLoadingGeocoding) return <Spinner />;
+
+	if (geocodingError) return <Message message={geocodingError} />;
 
 	return (
 		<form className={styles.form}>
 			<div className={styles.row}>
-				<label htmlFor='cityName'>City name</label>
-				<input id='cityName' onChange={(e) => setCityName(e.target.value)} value={cityName} />
-				{/* <span className={styles.flag}>{emoji}</span> */}
+				<label htmlFor='cityName'>Place name</label>
+				<input
+					id='cityName'
+					onChange={(e) => setCityName(e.target.value)}
+					value={`${cityName}, ${country}`}
+				/>
+				<span className={`${styles.flag} fi fi-${(countryCode || '').toLowerCase()}`}></span>
 			</div>
 
 			<div className={styles.row}>
