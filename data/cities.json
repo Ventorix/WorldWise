@@ -13,18 +13,6 @@
       "id": 73930385
     },
     {
-      "cityName": "Madrid",
-      "countryName": "Spain",
-      "countryCode": "ES",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
       "cityName": "Berlin",
       "countryName": "Germany",
       "countryCode": "DE",
@@ -37,18 +25,6 @@
       "id": 98443197
     },
     {
-      "cityName": "Wassertrudingen",
-      "countryName": "Germany",
-      "countryCode": "DE",
-      "date": "2023-09-25T01:38:21.374Z",
-      "notes": "Test",
-      "position": {
-        "lat": "49.040728867934575",
-        "lng": "10.634765625"
-      },
-      "id": 98443198
-    },
-    {
       "cityName": "Moscow",
       "countryName": "Russian Federation (the)",
       "countryCode": "RU",
@@ -59,6 +35,18 @@
         "lng": "37.52929687500001"
       },
       "id": 98443199
+    },
+    {
+      "cityName": "Luesia",
+      "countryName": "Spain",
+      "countryCode": "ES",
+      "date": "2023-09-25T02:14:29.253Z",
+      "notes": "",
+      "position": {
+        "lat": "42.458482606445074",
+        "lng": "-0.9667968750000001"
+      },
+      "id": 98443200
     }
   ]
 }
