@@ -1,4 +1,4 @@
-import { useEffect, useState, createContext, useContext, useReducer } from 'react';
+import { useEffect, createContext, useContext, useReducer } from 'react';
 
 const CitiesContext = createContext();
 
