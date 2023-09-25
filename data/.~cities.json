@@ -1,0 +1,64 @@
+{
+  "cities": [
+    {
+      "cityName": "Lisbon",
+      "countryName": "Portugal",
+      "countryCode": "PT",
+      "date": "2027-10-31T15:59:59.138Z",
+      "notes": "My favorite city so far!",
+      "position": {
+        "lat": 38.727881642324164,
+        "lng": -9.140900099907554
+      },
+      "id": 73930385
+    },
+    {
+      "cityName": "Berlin",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": 98443197
+    },
+    {
+      "cityName": "Moscow",
+      "countryName": "Russian Federation (the)",
+      "countryCode": "RU",
+      "date": "2023-09-25T01:53:27.618Z",
+      "notes": "Shithole",
+      "position": {
+        "lat": "55.705300013061866",
+        "lng": "37.52929687500001"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Luesia",
+      "countryName": "Spain",
+      "countryCode": "ES",
+      "date": "2023-09-25T02:14:29.253Z",
+      "notes": "",
+      "position": {
+        "lat": "42.458482606445074",
+        "lng": "-0.9667968750000001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Siverek",
+      "countryName": "Turkiye",
+      "countryCode": "TR",
+      "date": "2023-09-25T21:45:28.102Z",
+      "notes": "Accept",
+      "position": {
+        "lat": "37.72351317898052",
+        "lng": "39.81445312500001"
+      },
+      "id": 98443201
+    }
+  ]
+}
