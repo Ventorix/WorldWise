@@ -1,40 +1,64 @@
 {
-	"cities": [
-		{
-			"cityName": "Lisbon",
-			"countryName": "Portugal",
-			"countryCode": "PT",
-			"date": "2027-10-31T15:59:59.138Z",
-			"notes": "My favorite city so far!",
-			"position": {
-				"lat": 38.727881642324164,
-				"lng": -9.140900099907554
-			},
-			"id": 73930385
-		},
-		{
-			"cityName": "Madrid",
-			"countryName": "Spain",
-			"countryCode": "ES",
-			"date": "2027-07-15T08:22:53.976Z",
-			"notes": "",
-			"position": {
-				"lat": 40.46635901755316,
-				"lng": -3.7133789062500004
-			},
-			"id": 17806751
-		},
-		{
-			"cityName": "Berlin",
-			"countryName": "Germany",
-			"countryCode": "DE",
-			"date": "2027-02-12T09:24:11.863Z",
-			"notes": "Amazing 😃",
-			"position": {
-				"lat": 52.53586782505711,
-				"lng": 13.376933665713324
-			},
-			"id": 98443197
-		}
-	]
+  "cities": [
+    {
+      "cityName": "Lisbon",
+      "countryName": "Portugal",
+      "countryCode": "PT",
+      "date": "2027-10-31T15:59:59.138Z",
+      "notes": "My favorite city so far!",
+      "position": {
+        "lat": 38.727881642324164,
+        "lng": -9.140900099907554
+      },
+      "id": 73930385
+    },
+    {
+      "cityName": "Madrid",
+      "countryName": "Spain",
+      "countryCode": "ES",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": 17806751
+    },
+    {
+      "cityName": "Berlin",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": 98443197
+    },
+    {
+      "cityName": "Wassertrudingen",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "date": "2023-09-25T01:38:21.374Z",
+      "notes": "Test",
+      "position": {
+        "lat": "49.040728867934575",
+        "lng": "10.634765625"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Moscow",
+      "countryName": "Russian Federation (the)",
+      "countryCode": "RU",
+      "date": "2023-09-25T01:53:27.618Z",
+      "notes": "Shithole",
+      "position": {
+        "lat": "55.705300013061866",
+        "lng": "37.52929687500001"
+      },
+      "id": 98443199
+    }
+  ]
 }
