@@ -11,52 +11,55 @@ import CountriesList from './components/CountriesList';
 import City from './components/City';
 import Form from './components/Form';
 import { CitiesProvider } from './contexts/CitiesContext';
+import { AuthProvider } from './contexts/FakeAuthContext';
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route index element={<Homepage />} />
-				<Route path='product' element={<Product />} />
-				<Route path='pricing' element={<Pricing />} />
-				<Route path='login' element={<Login />} />
-				<Route
-					path='app'
-					element={
-						<CitiesProvider>
-							<AppLayout />
-						</CitiesProvider>
-					}>
-					<Route index element={<Navigate replace to='cities' />} />
+		<AuthProvider>
+			<BrowserRouter>
+				<Routes>
+					<Route index element={<Homepage />} />
+					<Route path='product' element={<Product />} />
+					<Route path='pricing' element={<Pricing />} />
+					<Route path='login' element={<Login />} />
 					<Route
-						path='cities'
+						path='app'
 						element={
 							<CitiesProvider>
-								<CityList />
+								<AppLayout />
 							</CitiesProvider>
-						}
-					/>
-					<Route
-						path='cities/:id'
-						element={
-							<CitiesProvider>
-								<City />
-							</CitiesProvider>
-						}
-					/>
-					<Route
-						path='countries'
-						element={
-							<CitiesProvider>
-								<CountriesList />
-							</CitiesProvider>
-						}
-					/>
-					<Route path='form' element={<Form />} />
-				</Route>
-				<Route path='*' element={<PageNotFound />} />
-			</Routes>
-		</BrowserRouter>
+						}>
+						<Route index element={<Navigate replace to='cities' />} />
+						<Route
+							path='cities'
+							element={
+								<CitiesProvider>
+									<CityList />
+								</CitiesProvider>
+							}
+						/>
+						<Route
+							path='cities/:id'
+							element={
+								<CitiesProvider>
+									<City />
+								</CitiesProvider>
+							}
+						/>
+						<Route
+							path='countries'
+							element={
+								<CitiesProvider>
+									<CountriesList />
+								</CitiesProvider>
+							}
+						/>
+						<Route path='form' element={<Form />} />
+					</Route>
+					<Route path='*' element={<PageNotFound />} />
+				</Routes>
+			</BrowserRouter>
+		</AuthProvider>
 	);
 }
 

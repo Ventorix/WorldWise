@@ -9,9 +9,10 @@ const initialState = {
 
 function reducer(state, action) {
 	const { type, payload } = action;
-
+	console.log('isAuthenticated', state.isAuthenticated);
 	switch (type) {
 		case 'login':
+			console.log('Is logged');
 			return { ...state, user: payload, isAuthenticated: true };
 		case 'logout':
 			return { ...state, user: null, isAuthenticated: false };
@@ -31,8 +32,9 @@ function AuthProvider({ children }) {
 	const [{ user, isAuthenticated }, dispatch] = useReducer(reducer, initialState);
 
 	function login(email, password) {
-		if (email === FAKE_USER.email && password === FAKE_USER.password)
+		if (email === FAKE_USER.email && password === FAKE_USER.password) {
 			dispatch({ type: 'login', payload: FAKE_USER });
+		}
 	}
 
 	function logout() {
@@ -47,8 +49,11 @@ function AuthProvider({ children }) {
 }
 
 function useAuth() {
-	const context = useContext();
+	const context = useContext(AuthContext);
+
 	if (context === undefined) throw new Error('AuthContext was used outside of AuthProvider');
+
+	return context;
 }
 
 export { AuthProvider, useAuth };
