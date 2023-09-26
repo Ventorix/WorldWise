@@ -47,6 +47,18 @@
         "lng": "-0.9667968750000001"
       },
       "id": 98443200
+    },
+    {
+      "cityName": "Cerezo de Arriba",
+      "countryName": "Spain",
+      "countryCode": "ES",
+      "date": "2023-09-25T23:51:28.597Z",
+      "notes": "sdasd",
+      "position": {
+        "lat": "41.24774415728384",
+        "lng": "-3.5595703125"
+      },
+      "id": 98443202
     }
   ]
 }

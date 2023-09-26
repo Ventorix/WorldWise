@@ -9,10 +9,9 @@ const initialState = {
 
 function reducer(state, action) {
 	const { type, payload } = action;
-	console.log('isAuthenticated', state.isAuthenticated);
+
 	switch (type) {
 		case 'login':
-			console.log('Is logged');
 			return { ...state, user: payload, isAuthenticated: true };
 		case 'logout':
 			return { ...state, user: null, isAuthenticated: false };

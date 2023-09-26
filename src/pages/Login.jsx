@@ -14,7 +14,6 @@ export default function Login() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		console.log('Login', isAuthenticated);
 		if (isAuthenticated === true) navigate('/app', { replace: true });
 	}, [isAuthenticated, navigate]);
 
